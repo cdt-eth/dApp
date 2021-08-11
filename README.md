@@ -1,9 +1,6 @@
 # Fullstack ETH dApp
 
-**Client Framework - _React_**<br/>
-**Ethereum development environment - _Hardhat_**<br/>
-**Ethereum Web Client Library - _Ethers.js_**<br/>
-**API layer - _The Graph Protocol_**
+## Fullstack dApp on the Ethereum blockchain with React, Solidity, Hardhat, and Ethers.js.
 
 <br/>
 
