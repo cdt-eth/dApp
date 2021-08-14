@@ -8,9 +8,11 @@ const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 const tokenAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
 
 function App() {
-  const [greeting, setGreetingValue] = useState("");
-  const [userAccount, setUserAccount] = useState("");
+  const [greeting, setGreetingValue] = useState<string>("");
+  const [userAccount, setUserAccount] = useState<string>("");
   const [amount, setAmount] = useState(0);
+
+  let window: any;
 
   async function requestAccount() {
     await window.ethereum.request({
@@ -88,7 +90,7 @@ function App() {
           placeholder="Set greeting"
           value={greeting}
         />
-
+        <br />
         <button onClick={getBalance}> Get Balance </button>
         <button onClick={sendCoins}> Send Coins </button>
         <input
@@ -96,7 +98,7 @@ function App() {
           placeholder="Set Account ID"
         />
         <input
-          onChange={(e) => setAmount(e.target.value)}
+          onChange={(e) => setAmount(e.target.value as any)}
           placeholder="Amount"
         />
       </header>
